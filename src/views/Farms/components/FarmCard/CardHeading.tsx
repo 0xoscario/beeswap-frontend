@@ -35,7 +35,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
         <Heading mb="4px">{lpLabel}</Heading>
         <Flex justifyContent="center">
           {/* {isCommunityFarm ? <CommunityTag /> : <CoreTag />} */}
-          <RiskTag risk={risk} />
+          {/* <RiskTag risk={risk} /> */}
           <MultiplierTag variant="secondary">{multiplier}</MultiplierTag>
         </Flex>
       </Flex>
