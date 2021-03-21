@@ -57,6 +57,7 @@ const fetchFarms = async () => {
         quoteTokenDecimals
       ] = await multicall(erc20, calls)
 
+
       let tokenAmount;
       let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
@@ -108,9 +109,11 @@ const fetchFarms = async () => {
         },
         {
           address: getMasterChefAddress(),
-          name: 'eggPerBlock',
+          name: 'HoneyPerBlock',
         },
       ])
+
+      console.log("Token Blanace", eggPerBlock)
 
       const allocPoint = new BigNumber(info.allocPoint._hex)
       const poolWeight = allocPoint.div(new BigNumber(totalAllocPoint))

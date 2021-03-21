@@ -35,6 +35,8 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
 
+
+
   const lpContract = useMemo(() => {
     if(isTokenOnly){
       return getContract(ethereum as provider, tokenAddress);
@@ -49,7 +51,9 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
       setRequestedApproval(true)
       await onApprove()
       setRequestedApproval(false)
+
     } catch (e) {
+      console.log("Some error occured")
       console.error(e)
     }
   }, [onApprove])

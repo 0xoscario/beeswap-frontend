@@ -168,7 +168,7 @@
   },
   {
     "inputs": [],
-    "name": "eggPerBlock",
+    "name": "HoneyPerBlock",
     "outputs": [
       {
         "internalType": "uint256",
