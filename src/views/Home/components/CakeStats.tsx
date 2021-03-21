@@ -29,16 +29,16 @@ const CakeStats = () => {
   const farms = useFarms();
   const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
 
-  let eggPerBlock = 0;
-  if(farms && farms[0] && farms[0].eggPerBlock){
-    eggPerBlock = new BigNumber(farms[0].eggPerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let honeyPerBlock = 0;
+  if(farms && farms[0] && farms[0].honeyPerBlock){
+    honeyPerBlock = new BigNumber(farms[0].honeyPerBlock).div(new BigNumber(10).pow(18)).toNumber();
   }
 
   return (
     <StyledCakeStats>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(534, 'Egg Stats')}
+          {TranslateString(534, 'Honey Stats')}
         </Heading>
         <Row>
           <Text fontSize="14px">{TranslateString(536, 'Total EGG Supply')}</Text>
@@ -50,7 +50,7 @@ const CakeStats = () => {
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(540, 'New EGG/block')}</Text>
-          <Text bold fontSize="14px">{eggPerBlock}</Text>
+          <Text bold fontSize="14px">{honeyPerBlock}</Text>
         </Row>
       </CardBody>
     </StyledCakeStats>
