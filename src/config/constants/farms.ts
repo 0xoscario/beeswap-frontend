@@ -47,8 +47,8 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xc7B82c538A88DACE48659F8e1f0948D2176E2796',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenSymbol: QuoteToken.BTCB,
+    quoteTokenAdresses: contracts.btcb,
   },
   {
     pid: 3,
@@ -63,8 +63,8 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xc7B82c538A88DACE48659F8e1f0948D2176E2796',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenSymbol: QuoteToken.ETH,
+    quoteTokenAdresses: contracts.eth,
   },
   {
     pid: 4,
@@ -79,7 +79,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xc7B82c538A88DACE48659F8e1f0948D2176E2796',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenSymbol: QuoteToken.CAKE,
     quoteTokenAdresses: contracts.busd,
   },
   {
