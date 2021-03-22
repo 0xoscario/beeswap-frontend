@@ -21,13 +21,7 @@ const MultiplierTag = styled(Tag)`
   margin-left: 4px;
 `
 
-const CardHeading: React.FC<ExpandableSectionProps> = ({
-  lpLabel,
-  multiplier,
-  risk,
-  farmImage,
-  tokenSymbol,
-}) => {
+const CardHeading: React.FC<ExpandableSectionProps> = ({ lpLabel, multiplier, risk, farmImage, tokenSymbol }) => {
   return (
     <Wrapper justifyContent="space-between" alignItems="center" mb="12px">
       <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} />

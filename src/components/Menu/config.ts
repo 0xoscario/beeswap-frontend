@@ -26,7 +26,7 @@ const config: MenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'Nests',
+    label: 'The Hive',
     icon: 'PoolIcon',
     href: '/nests',
   },
@@ -82,15 +82,15 @@ const config: MenuEntry[] = [
       // },
       {
         label: 'Github',
-        href: 'https://github.com/goosedefi/',
+        href: 'https://github.com/mw2000/BeeSwap-Frontend',
       },
       {
         label: 'Docs',
-        href: 'https://goosedefi.gitbook.io/goose-finance/',
+        href: 'https://beeswap.gitbook.io/beeswap/',
       },
       {
         label: 'Blog',
-        href: 'https://goosefinance.medium.com/',
+        href: 'https://beeswapbsc.medium.com',
       },
     ],
   },

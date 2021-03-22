@@ -14,8 +14,8 @@ const StyledTotalValueLockedCard = styled(Card)`
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   // const data = useGetStats()
-  const totalValue = useTotalValue();
-  const tvl = totalValue.toFixed(2);
+  const totalValue = useTotalValue()
+  const tvl = totalValue.toFixed(2)
 
   return (
     <StyledTotalValueLockedCard>

@@ -26,12 +26,12 @@ const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
-  const farms = useFarms();
+  const farms = useFarms()
   const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
 
-  let honeyPerBlock = 0;
-  if(farms && farms[0] && farms[0].honeyPerBlock){
-    honeyPerBlock = new BigNumber(farms[0].honeyPerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let honeyPerBlock = 0
+  if (farms && farms[0] && farms[0].honeyPerBlock) {
+    honeyPerBlock = new BigNumber(farms[0].honeyPerBlock).div(new BigNumber(10).pow(18)).toNumber()
   }
 
   return (
@@ -50,7 +50,9 @@ const CakeStats = () => {
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(540, 'New HONEY/block')}</Text>
-          <Text bold fontSize="14px">{honeyPerBlock}</Text>
+          <Text bold fontSize="14px">
+            {honeyPerBlock}
+          </Text>
         </Row>
       </CardBody>
     </StyledCakeStats>

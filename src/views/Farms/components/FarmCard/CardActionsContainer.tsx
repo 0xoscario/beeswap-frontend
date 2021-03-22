@@ -31,17 +31,15 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   const { pid, lpAddresses, tokenAddresses, isTokenOnly, depositFeeBP } = useFarmFromPid(farm.pid)
   const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
   const lpAddress = lpAddresses[process.env.REACT_APP_CHAIN_ID]
-  const tokenAddress = tokenAddresses[process.env.REACT_APP_CHAIN_ID];
+  const tokenAddress = tokenAddresses[process.env.REACT_APP_CHAIN_ID]
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
 
-
-
   const lpContract = useMemo(() => {
-    if(isTokenOnly){
-      return getContract(ethereum as provider, tokenAddress);
+    if (isTokenOnly) {
+      return getContract(ethereum as provider, tokenAddress)
     }
-    return getContract(ethereum as provider, lpAddress);
+    return getContract(ethereum as provider, lpAddress)
   }, [ethereum, lpAddress, tokenAddress, isTokenOnly])
 
   const { onApprove } = useApprove(lpContract)
@@ -51,16 +49,21 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
       setRequestedApproval(true)
       await onApprove()
       setRequestedApproval(false)
-
     } catch (e) {
-      console.log("Some error occured")
+      console.log('Some error occured')
       console.error(e)
     }
   }, [onApprove])
 
   const renderApprovalOrStakeButton = () => {
     return isApproved ? (
-      <StakeAction stakedBalance={stakedBalance} tokenBalance={tokenBalance} tokenName={lpName} pid={pid} depositFeeBP={depositFeeBP} />
+      <StakeAction
+        stakedBalance={stakedBalance}
+        tokenBalance={tokenBalance}
+        tokenName={lpName}
+        pid={pid}
+        depositFeeBP={depositFeeBP}
+      />
     ) : (
       <Button mt="8px" fullWidth disabled={requestedApproval} onClick={handleApprove}>
         {TranslateString(999, 'Approve Contract')}
