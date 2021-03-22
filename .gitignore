@@ -7,7 +7,7 @@
 /.pnp
 .pnp.js
 
-/node_modules/!@pancakeswap-libs/
+!/@pancakeswap-libs
 
 # testing
 /coverage
