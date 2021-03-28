@@ -17,7 +17,7 @@ export default {
   },
   wbnb: {
     56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-    97: '0x094616f0bdfb0b526bd735bf66eca0ad254ca81f',
+    97: '0xc4f52d50de4069742417193aabe29218988a4395',
   },
   lottery: {
     56: '',
@@ -33,7 +33,7 @@ export default {
   },
   busd: {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-    97: '0x4c5575eed3619db75d78bdd0b9ed10bb715f9ef0',
+    97: '0x2ee7701ec40f1afff8883dbcfa7a55a157fd32ed',
   },
   ust: {
     56: '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
