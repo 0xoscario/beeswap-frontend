@@ -53,6 +53,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  {
+    pid: 3,
+    risk: 1,
+    isTokenOnly: true,
+    lpSymbol: 'BUSD',
+    lpAddresses: {
+      97: '0x2ee7701ec40f1afff8883dbcfa7a55a157fd32ed',
+      56: '0xc15fa3e22c912a276550f3e5fe3b0deb87b55acd', // USDT-BUSD LP
+    },
+    tokenSymbol: 'BUSD',
+    tokenAddresses: {
+      97: '0x2ee7701ec40f1afff8883dbcfa7a55a157fd32ed',
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
 
   // Mainnet Farms
 
