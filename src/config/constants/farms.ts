@@ -70,6 +70,22 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  {
+    pid: 4,
+    risk: 3,
+    lpSymbol: 'BNB-BUSD LP',
+    lpAddresses: {
+      97: '0x29caa96c302a25703067f65ae1df2560fc0c687d',
+      56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',
+    },
+    tokenSymbol: 'BNB',
+    tokenAddresses: {
+      97: '0x29caa96c302a25703067f65ae1df2560fc0c687d',
+      56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
 
   // Mainnet Farms
 
