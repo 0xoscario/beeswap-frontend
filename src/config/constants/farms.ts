@@ -47,7 +47,7 @@ const farms: FarmConfig[] = [
     },
     tokenSymbol: 'HONEY',
     tokenAddresses: {
-      97: '0x2ee7701ec40f1afff8883dbcfa7a55a157fd32ed',
+      97: '0x8FDD8A10E0b3e89bDB8049435528B69b9EA09C94',
       56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
