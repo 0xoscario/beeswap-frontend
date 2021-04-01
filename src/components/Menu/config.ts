@@ -28,7 +28,7 @@ const config: MenuEntry[] = [
   {
     label: 'The Hive',
     icon: 'PoolIcon',
-    href: '/nests',
+    href: '/hive',
   },
   // {
   //   label: 'Pools',

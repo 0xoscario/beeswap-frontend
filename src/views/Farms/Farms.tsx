@@ -68,8 +68,12 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           apy = apy.div(totalValue)
         }
 
+        console.log(farm.pid, apy.toNumber())
+
         return { ...farm, apy }
       })
+
+      // console.log(farmsToDisplayWithAPY)
       return farmsToDisplayWithAPY.map((farm) => (
         <FarmCard
           key={farm.pid}
