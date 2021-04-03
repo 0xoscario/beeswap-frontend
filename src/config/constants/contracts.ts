@@ -15,6 +15,10 @@ export default {
     56: '',
     97: '',
   },
+  presale: {
+    56: '',
+    97: '0xA1e02015eC27477638278296FDCB136a9E3b02d2',
+  },
   wbnb: {
     56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     97: '0xc4f52d50de4069742417193aabe29218988a4395',

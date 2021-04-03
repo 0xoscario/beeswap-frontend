@@ -7,7 +7,7 @@ import FarmStakingCard from './components/FarmStakingCard'
 import LotteryCard from './components/LotteryCard'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
-import ClaimButton from './components/ClaimButton'
+import ClaimCard from './components/ClaimCard'
 
 const Hero = styled.div`
   align-items: center;
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
       <div>
         <Cards>
           <FarmStakingCard />
-          <ClaimButton />
+          <ClaimCard />
           {/* <LotteryCard /> */}
           <CakeStats />
           <TotalValueLockedCard />

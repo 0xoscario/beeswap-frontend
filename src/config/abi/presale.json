@@ -1,0 +1,126 @@
+[
+  {
+    "inputs": [
+    {
+      "internalType": "address",
+      "name": "_honeyAddress",
+      "type": "address"
+    },
+    {
+      "internalType": "uint256",
+      "name": "_startingTimestamp",
+      "type": "uint256"
+    }],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "user",
+      "type": "address"
+    },
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "tokens",
+      "type": "uint256"
+    }],
+    "name": "TokenBuy",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "user",
+      "type": "address"
+    },
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "tokens",
+      "type": "uint256"
+    }],
+    "name": "TokenClaim",
+    "type": "event"
+  },
+  {
+    "inputs": [
+    {
+      "internalType": "address",
+      "name": "beneficiary",
+      "type": "address"
+    }],
+    "name": "buy",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "claimTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getHoneyTokensLeft",
+    "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTokensOwned",
+    "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+    {
+      "internalType": "bool",
+      "name": "_isSaleActive",
+      "type": "bool"
+    }],
+    "name": "setSaleActive",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawFunds",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawUnsoldHoney",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
+]
