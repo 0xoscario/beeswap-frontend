@@ -77,13 +77,13 @@ const farms: FarmConfig[] = [
       97: '0x29caa96c302a25703067f65ae1df2560fc0c687d',
       56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',
     },
-    tokenSymbol: 'BUSD',
+    tokenSymbol: 'BNB',
     tokenAddresses: {
       97: '0x2ee7701ec40f1afff8883dbcfa7a55a157fd32ed',
-      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+      56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
     },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
   },
 
   // Mainnet Farms
