@@ -129,7 +129,7 @@ export const useTotalValue = (): BigNumber => {
         val = (busdPrice.times(farm.lpTotalInQuoteToken));
       }
 
-      if (farm.pid !== 11 && farm.pid !== 2 && farm.pid !== 3 && farm.pid !== 4) {
+      if (farm.pid !== 2 && farm.pid !== 3 && farm.pid !== 4) {
         console.log(farm.pid, val)
         value = value.plus(val)
       }

@@ -54,5 +54,9 @@ export default {
   pancake: {
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     97: '',
+  },
+  usdc: {
+    56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
+    97: ''
   }
 }
