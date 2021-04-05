@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://bee-swap-exchange.herokuapp.com/#/swap',
+        href: 'https://exchange.beeswap.bz/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://bee-swap-exchange.herokuapp.com/#/pool',
+        href: 'https://exchange.beeswap.bz/#/pool',
       },
     ],
   },
