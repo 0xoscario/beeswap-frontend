@@ -44,7 +44,7 @@ export default {
     97: '0x980292877be925db9e5dfb3bb9be9873208e1bb6',
   },
   btcb: {
-    56: '',
+    56: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
     97: '0xbc23fcad2c5e279c65fc1da5b181305bb2d1bab7',
   },
   eth: {
