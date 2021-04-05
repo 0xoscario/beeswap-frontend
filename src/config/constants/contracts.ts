@@ -1,6 +1,6 @@
 export default {
   cake: {
-    56: '0xc7B82c538A88DACE48659F8e1f0948D2176E2796',
+    56: '0x1BD7dF20aE5e884C61b7017FaC557e82cCA6baEe',
     97: '0x8FDD8A10E0b3e89bDB8049435528B69b9EA09C94',
   },
   syrup: {
@@ -8,7 +8,7 @@ export default {
     97: '',
   },
   masterChef: {
-    56: '0xfaF4fa4215fEC0EA5a927525d6F7Fc1Adc559d1E',
+    56: '0x601427D3890A0f9578E68baabB80fFDdCF420090',
     97: '0xa93D40de33EbC69FBf0242cb5246450cef18A1F4',
   },
   sousChef: {
@@ -16,7 +16,7 @@ export default {
     97: '',
   },
   presale: {
-    56: '',
+    56: '0xC2C040B682a3C8Eb7C6Ff5dDcF89cDb8A9166838',
     97: '0xA1e02015eC27477638278296FDCB136a9E3b02d2',
   },
   wbnb: {
