@@ -166,7 +166,7 @@ const farms: FarmConfig[] = [
       56: '0x1BD7dF20aE5e884C61b7017FaC557e82cCA6baEe',
     },
     quoteTokenSymbol: QuoteToken.CAKE,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenAdresses: contracts.pancake,
   },
   {
     pid: 5,
@@ -224,13 +224,13 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',
     },
-    tokenSymbol: 'BNB',
+    tokenSymbol: 'BUSD',
     tokenAddresses: {
       97: '',
-      56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
   },
   {
     pid: 9,
