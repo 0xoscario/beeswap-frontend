@@ -40,15 +40,15 @@ export default {
     97: '0x2ee7701ec40f1afff8883dbcfa7a55a157fd32ed',
   },
   ust: {
-    56: '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
+    56: '0x55d398326f99059ff775485246999027b3197955',
     97: '0x980292877be925db9e5dfb3bb9be9873208e1bb6',
   },
   btcb: {
-    56: '0xc15fa3e22c912a276550f3e5fe3b0deb87b55acd',
+    56: '',
     97: '0xbc23fcad2c5e279c65fc1da5b181305bb2d1bab7',
   },
   eth: {
-    56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+    56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
     97: '0xf670e09e0221a4100fbc83f4f49eda6e7bc923b0',
   },
   pancake: {
