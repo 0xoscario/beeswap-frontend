@@ -118,15 +118,15 @@ export const useTotalValue = (): BigNumber => {
     if (farm.lpTotalInQuoteToken) {
       let val
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
-        val = bnbPrice.times(farm.lpTotalInQuoteToken)
+        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
       } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = pancakePrice.times(farm.lpTotalInQuoteToken)
+        val = (pancakePrice.times(farm.lpTotalInQuoteToken));
       } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-        val = ethPrice.times(farm.lpTotalInQuoteToken)
+        val = (ethPrice.times(farm.lpTotalInQuoteToken));
       } else if (farm.quoteTokenSymbol === QuoteToken.BTCB) {
-        val = btcPrice.times(farm.lpTotalInQuoteToken)
+        val = (btcPrice.times(farm.lpTotalInQuoteToken));
       } else if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
-        val = busdPrice.times(farm.lpTotalInQuoteToken)
+        val = (busdPrice.times(farm.lpTotalInQuoteToken));
       }
 
       if (farm.pid !== 2 && farm.pid !== 3 && farm.pid !== 4) {
@@ -136,5 +136,7 @@ export const useTotalValue = (): BigNumber => {
     }
   }
 
+  
+  
   return value
 }
