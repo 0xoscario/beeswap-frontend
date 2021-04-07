@@ -224,13 +224,13 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',
     },
-    tokenSymbol: 'BNB',
+    tokenSymbol: 'BUSD',
     tokenAddresses: {
       97: '',
-      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
   },
   {
     pid: 9,
@@ -359,15 +359,15 @@ const farms: FarmConfig[] = [
     lpSymbol: 'CAKE',
     lpAddresses: {
       97: '',
-      56: '0x0ed8e0a2d99643e1e65cca22ed4424090b8b7458', // CAKE-BUSD LP
+      56: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6', // CAKE-BNb LP
     },
     tokenSymbol: 'CAKE',
     tokenAddresses: {
       97: '',
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
   },
   {
     pid: 17,
