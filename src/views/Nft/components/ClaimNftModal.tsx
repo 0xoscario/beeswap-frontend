@@ -64,7 +64,7 @@ const ClaimNftModal: React.FC<ClaimNftModalProps> = ({ nft, onSuccess, onDismiss
 
   useEffect(() => {
     if (cakeInWallet === 0) {
-      setError('You must have a CAKE balance greater than zero to claim NFT')
+      setError('You must have a HONEY balance greater than zero to claim NFT')
     }
   }, [cakeInWallet, setError])
 
