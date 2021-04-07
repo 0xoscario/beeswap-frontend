@@ -59,12 +59,7 @@ const ClaimCard = () => {
         </Heading>
         <Actions>
           {account ? (
-            <Button
-              id="harvest-all"
-              disabled={pendingTx}
-              onClick={harvestAllFarms}
-              fullWidth
-            >
+            <Button id="harvest-all" disabled={pendingTx} onClick={harvestAllFarms} fullWidth>
               {pendingTx ? 'Claiming HONEY' : 'Claim your HONEY'}
             </Button>
           ) : (
