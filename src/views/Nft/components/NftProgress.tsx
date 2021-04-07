@@ -79,7 +79,7 @@ const NftProgress = () => {
             )}{' '}
           </div>
         </InfoRow>
-        <Message>{TranslateString(999, 'NFTs can be traded in for HONEY until the above block height')}</Message>
+        <Message>{TranslateString(999, 'NFTs can be traded in for CAKE until the above block height')}</Message>
       </CardBody>
     </Card>
   )
