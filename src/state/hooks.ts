@@ -77,20 +77,23 @@ export const usePriceBnbBusd = (): BigNumber => {
 
 export const usePriceEthBnb = (): BigNumber => {
   const pid = 5 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceBtcbBnb = (): BigNumber => {
   const pid = 6 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePricePancakeBnb = (): BigNumber => {
   const pid = 7 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
@@ -129,8 +132,8 @@ export const useTotalValue = (): BigNumber => {
         val = busdPrice.times(farm.lpTotalInQuoteToken)
       }
 
-      if (farm.pid !== 2 && farm.pid !== 3 && farm.pid !== 4) {
-        console.log(farm.pid, val)
+      if (farm.pid !== 2 && farm.pid !== 4) {
+        console.log(farm.pid, val.toNumber())
         value = value.plus(val)
       }
     }
