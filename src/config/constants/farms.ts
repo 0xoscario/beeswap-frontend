@@ -169,6 +169,38 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.pancake,
   },
   {
+    pid: 21,
+    risk: 2,
+    lpSymbol: 'HONEY-ASS LP',
+    lpAddresses: {
+      97: '',
+      56: '0xe285746a516759518e2a8c020ba4e80cabc87dd6',
+    },
+    tokenSymbol: 'HONEY',
+    tokenAddresses: {
+      97: '',
+      56: '0x1BD7dF20aE5e884C61b7017FaC557e82cCA6baEe',
+    },
+    quoteTokenSymbol: QuoteToken.ASS,
+    quoteTokenAdresses: contracts.ass,  
+  },
+  {
+    pid: 20,
+    risk: 2,
+    lpSymbol: 'BNB-ASS LP',
+    lpAddresses: {
+      97: '',
+      56: '0x2407A09D25F8b72c8838A56b4100Ce600fbFA4ed',
+    },
+    tokenSymbol: 'ASS',
+    tokenAddresses: {
+      97: '',
+      56: '0x7c63f96feafacd84e75a594c00fac3693386fbf0',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,  
+  },
+  {
     pid: 5,
     risk: 2,
     lpSymbol: 'BNB-ETH LP',

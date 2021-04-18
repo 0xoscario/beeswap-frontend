@@ -82,6 +82,13 @@ export const usePriceEthBnb = (): BigNumber => {
   return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
+export const usePriceAssBnb = (): BigNumber => {
+  const pid = 20 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
+  const farm = useFarmFromPid(pid)
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+}
+
 export const usePriceBtcbBnb = (): BigNumber => {
   const pid = 6 // BUSD-BNB LP
   const bnbPriceUSD = usePriceBnbBusd()
@@ -112,6 +119,7 @@ export const useTotalValue = (): BigNumber => {
   const cakePrice = usePriceCakeBusd()
   const btcPrice = usePriceBtcbBnb()
   const ethPrice = usePriceEthBnb()
+  const assPrice = usePriceAssBnb();
   const pancakePrice = usePricePancakeBnb()
   const busdPrice = new BigNumber(1)
 
@@ -130,6 +138,8 @@ export const useTotalValue = (): BigNumber => {
         val = btcPrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
         val = busdPrice.times(farm.lpTotalInQuoteToken)
+      } else if (farm.quoteTokenSymbol === QuoteToken.ASS) {
+        val = assPrice.times(farm.lpTotalInQuoteToken)
       }
 
       if (farm.pid !== 2 && farm.pid !== 4) {

@@ -8,7 +8,7 @@ import { Image, Heading } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceEthBnb } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceEthBnb, usePriceAssBnb } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
@@ -28,6 +28,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const cakePrice = usePriceCakeBusd()
   const bnbPrice = usePriceBnbBusd()
   const ethPrice = usePriceEthBnb()
+  const assPrice = usePriceAssBnb()
 
   const { account, ethereum }: { account: string; ethereum: provider } = useWallet()
   const { tokenMode } = farmsProps
@@ -66,6 +67,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           totalValue = totalValue.times(bnbPrice)
         } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
           totalValue = totalValue.times(ethPrice)
+        } else if (farm.quoteTokenSymbol === QuoteToken.ASS) {
+          totalValue = totalValue.times(assPrice)
         }
 
         if (totalValue.comparedTo(0) > 0) {
@@ -84,12 +87,13 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           bnbPrice={bnbPrice}
           cakePrice={cakePrice}
           ethPrice={ethPrice}
+          assPrice = {assPrice}
           ethereum={ethereum}
           account={account}
         />
       ))
     },
-    [bnbPrice, account, cakePrice, ethPrice, ethereum],
+    [bnbPrice, account, cakePrice, ethPrice, assPrice, ethereum],
   )
 
   return (

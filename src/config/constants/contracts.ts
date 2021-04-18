@@ -59,4 +59,8 @@ export default {
     56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
     97: '',
   },
+  ass: {
+    56: '0x7c63f96feafacd84e75a594c00fac3693386fbf0',
+    97: ''
+  }
 }
