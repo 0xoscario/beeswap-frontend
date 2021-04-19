@@ -139,11 +139,11 @@ export const useTotalValue = (): BigNumber => {
       } else if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
         val = busdPrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.ASS) {
-        val = assPrice.times(farm.lpTotalInQuoteToken)
+        val = cakePrice.times(farm.lpTotalInQuoteToken)
       }
 
       if (farm.pid !== 2 && farm.pid !== 4) {
-        console.log(farm.pid, val.toNumber())
+        console.log(farm.pid, val.toNumber(), farm.lpTotalInQuoteToken)
         value = value.plus(val)
       }
     }

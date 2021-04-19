@@ -68,7 +68,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
           totalValue = totalValue.times(ethPrice)
         } else if (farm.quoteTokenSymbol === QuoteToken.ASS) {
-          totalValue = totalValue.times(assPrice)
+          totalValue = totalValue.times(cakePrice)
         }
 
         if (totalValue.comparedTo(0) > 0) {
