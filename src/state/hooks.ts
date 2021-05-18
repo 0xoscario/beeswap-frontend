@@ -143,7 +143,11 @@ export const useTotalValue = (): BigNumber => {
       }
 
       if (farm.pid !== 2 && farm.pid !== 4) {
-        console.log(farm.pid, val.toNumber(), farm.lpTotalInQuoteToken)
+        if (!val) {
+          console.log(farm.pid)
+        } else {
+          console.log(farm.pid, val.toNumber(), farm.lpTotalInQuoteToken)
+        }
         value = value.plus(val)
       }
     }
