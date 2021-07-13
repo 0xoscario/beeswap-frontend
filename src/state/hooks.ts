@@ -77,20 +77,30 @@ export const usePriceBnbBusd = (): BigNumber => {
 
 export const usePriceEthBnb = (): BigNumber => {
   const pid = 5 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+}
+
+export const usePriceAssBnb = (): BigNumber => {
+  const pid = 20 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
+  const farm = useFarmFromPid(pid)
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceBtcbBnb = (): BigNumber => {
   const pid = 6 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePricePancakeBnb = (): BigNumber => {
   const pid = 7 // BUSD-BNB LP
+  const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
@@ -109,6 +119,7 @@ export const useTotalValue = (): BigNumber => {
   const cakePrice = usePriceCakeBusd()
   const btcPrice = usePriceBtcbBnb()
   const ethPrice = usePriceEthBnb()
+  const assPrice = usePriceAssBnb();
   const pancakePrice = usePricePancakeBnb()
   const busdPrice = new BigNumber(1)
 
@@ -118,25 +129,29 @@ export const useTotalValue = (): BigNumber => {
     if (farm.lpTotalInQuoteToken) {
       let val
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
-        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
+        val = bnbPrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = (pancakePrice.times(farm.lpTotalInQuoteToken));
+        val = pancakePrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-        val = (ethPrice.times(farm.lpTotalInQuoteToken));
+        val = ethPrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.BTCB) {
-        val = (btcPrice.times(farm.lpTotalInQuoteToken));
+        val = btcPrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
-        val = (busdPrice.times(farm.lpTotalInQuoteToken));
+        val = busdPrice.times(farm.lpTotalInQuoteToken)
+      } else if (farm.quoteTokenSymbol === QuoteToken.ASS) {
+        val = cakePrice.times(farm.lpTotalInQuoteToken)
       }
 
-      if (farm.pid !== 2 && farm.pid !== 3 && farm.pid !== 4) {
-        console.log(farm.pid, val)
+      if (farm.pid !== 2 && farm.pid !== 4) {
+        if (!val) {
+          console.log(farm.pid)
+        } else {
+          console.log(farm.pid, val.toNumber(), farm.lpTotalInQuoteToken)
+        }
         value = value.plus(val)
       }
     }
   }
 
-  
-  
   return value
 }

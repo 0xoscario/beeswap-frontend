@@ -28,6 +28,8 @@ export enum QuoteToken {
   'UST' = 'UST',
   'BTCB' = 'BTCB',
   'ETH' = 'ETH',
+  'ASS' = 'ASS',
+  'HONEY' = 'HONEY'
 }
 
 export enum PoolCategory {

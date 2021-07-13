@@ -112,8 +112,6 @@ const fetchFarms = async () => {
         },
       ])
 
-      console.log('Token Blanace', honeyPerBlock)
-
       const allocPoint = new BigNumber(info.allocPoint._hex)
       const poolWeight = allocPoint.div(new BigNumber(totalAllocPoint))
 
