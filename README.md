@@ -1,7 +1,6 @@
-# 🥞 Pancake Frontend
+# Beeswap Frontend
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7bebf1a3-be7b-4165-afd1-446256acd5e3/deploy-status)](https://app.netlify.com/sites/pancake-prod/deploys)
+NFT-DAO defi application based on HECO
 
-This project contains the main features of the pancake application.
-
-If you want to contribute, please refer to the [contributing guidelines](./CONTRIBUTING.md) of this project.
+# NFT-DAO Frame
+![nft_content](https://user-images.githubusercontent.com/33234035/125451459-97d97732-f0e1-4d14-9d1a-74b068df9984.png)
